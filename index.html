@@ -27,21 +27,27 @@
 
         .style-carousel {
             background-color: rgba(255, 255, 255, 0.616);
-            padding: 4em 4em 4em 4em;
+            padding: 3em 3em 3em 3em;
             border-radius: 6px;
         }
-
+        .carousel-img2,
         .carousel-img {
-            /* height: 100px; */
+            height: 150px;
             /* width: 250px; */
             display: flex;
             justify-content: center;
             align-items: center;
+            /* background-color: black; */
         }
-
+        .carousel-img2{
+            border: 1px solid rgb(58, 58, 58);
+            margin: 0 6px;
+        }
+        .carousel-img2 img,
         .carousel-img img {
-            object-fit: contain;
-            height: 50px;
+            /* object-fit: contain; */
+            /* height: 60px;
+            width: auto; */
         }
     </style>
 </head>
@@ -50,35 +56,68 @@
 <!-- please put this code inside your class "inner" container -->
     <div class="style-carousel">
         <div class="logo-carousel">
-            <div>
-                <div class="carousel-img">
-                    <img src="/images/Hannah_Lipschutz-gray.png" alt="">
-                </div>
-            </div>
+           
 
-            <div>
-                <div class="carousel-img">
-                    <img src="/images/Rivet-gray.png" alt="">
+          <div>
+                <div class="carousel-img" style="width: 220px; ">
+                    <img src="/images/Rivet-gray.png" alt=""  style="height: 60px !important; ">
+                </div>
+            </div>
+          
+       <div>
+                <div class="carousel-img" style="width: 150px; ">
+                    <img src="/images/Michal_Eisik_gray.png" alt=""  style="height: 100px !important; ">
+                </div>
+            </div>
+                  <div>
+                <div class="carousel-img" style="width: 250px; ">
+                    <img src="/images/zedgroup-logo-gray.png" alt=""  style="height: 45px !important;">
+                </div>
+            </div>
+             <div>
+                <div class="carousel-img" style="width: 280px;">
+                    <img src="/images/Teamcare-gray.png" alt=""  style="height: 50px !important; ">
                 </div>
             </div>
             <div>
-                <div class="carousel-img">
-                    <img src="/images/Teamcare-gray.png" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="carousel-img">
-                    <img src="/images/Michal_Eisik_gray.png" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="carousel-img">
-                    <img src="/images/zedgroup-logo-gray.png" alt="">
+                <div class="carousel-img" style="width: 120px; " >
+                    <img src="/images/Hannah_Lipschutz-gray.png" alt=""  style="height: 100px !important; ">
                 </div>
             </div>
         </div>
     </div>
 
+
+    <div class="style-carousel" style="margin-top: 20px;">
+        <div class="logo-carousel2">
+            <div>
+                <div class="carousel-img2">
+                    <img src="/images/Rivet-gray.png" alt=""  style="height: 60px !important; ">
+                </div>
+            </div>
+          
+       <div>
+                <div class="carousel-img2" >
+                    <img src="/images/Michal_Eisik_gray.png" alt=""  style="height: 100px !important; ">
+                </div>
+            </div>
+                  <div>
+                <div class="carousel-img2" >
+                    <img src="/images/zedgroup-logo-gray.png" alt=""  style="height: 45px !important;">
+                </div>
+            </div>
+             <div>
+                <div class="carousel-img2" >
+                    <img src="/images/Teamcare-gray.png" alt=""  style="height: 50px !important; ">
+                </div>
+            </div>
+            <div>
+                <div class="carousel-img2" >
+                    <img src="/images/Hannah_Lipschutz-gray.png" alt=""  style="height: 100px !important; ">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- copy scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
@@ -89,13 +128,15 @@
 
         $(document).ready(function () {
             $(".logo-carousel").slick({
+                variableWidth: true,
+                // slidesToShow: 'auto',
                 autoplay: true,
                 autoplaySpeed: 50,
                 speed: 5000,
                 cssEase: 'linear',
-                slidesToShow: 4,
-                // slidesToScroll: 0,
-                variableWidth: false,
+                // slidesToShow: 3,
+                slidesToScroll: 1,
+                // variableWidth: false,
                 dots: false, // Show dots navigation
                 arrows: false,
                 responsive: [
@@ -118,6 +159,42 @@
 
 
     </script>
+
+<script>
+
+
+    $(document).ready(function () {
+        $(".logo-carousel2").slick({
+            variableWidth: true,
+            autoplay: true,
+            autoplaySpeed: 50,
+            speed: 5000,
+            cssEase: 'linear',
+            slidesToShow: 3,
+            // slidesToScroll: 0,
+            variableWidth: false,
+            dots: false, // Show dots navigation
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+
+
+
+</script>
 </body>
 
 </html>
